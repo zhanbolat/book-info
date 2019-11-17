@@ -25,4 +25,9 @@ public class BookController {
 
         return userBook;
     }
+    @GetMapping("/detail/{id}")
+    public Book getBookById(@PathVariable("id") String id) {
+
+        return new Book(id, id + " - Abay zholy", "Auezov", "");
+    }
 }
